@@ -1,0 +1,4 @@
+Sitemap: https://klepac-ceraj-lab.github.io/sitemap.xml
+
+User-agent: *
+Disallow:
