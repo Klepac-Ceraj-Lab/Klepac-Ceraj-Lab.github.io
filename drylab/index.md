@@ -14,3 +14,4 @@ date = Date(2021, 7, 10)
 
 ## Getting sequencing results
 
+- [Downloading and archiving](download/)

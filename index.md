@@ -16,3 +16,12 @@ or are interested in joining as a student, please visit http://vkclab.com.
 | Shelley Hoeft-McCann | Lab Manager               | sm106@wellesley.edu    | `@shelley` |
 
 
+## Using this site
+
+- If you're new to the lab,
+  get started by reading the [handbook](/handbook/).
+- If you're looking for protocols related to working in the lab space
+  (eg, things involving moving small amounts of liquid around),
+  take a look at the [Wetlab protocols](/wetlab/)
+- If you're looking for information about working with lab computers and servers,
+  checkout [Drylab protocols](/drylab/)
