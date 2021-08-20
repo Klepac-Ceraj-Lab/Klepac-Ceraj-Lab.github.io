@@ -1,0 +1,57 @@
++++
+title="File Sync and Backup"
++++
+
+# File Sync and Backup
+
+## Setting up duplicity
+
+`duplicty`[^duplicity] is a command-line tool that enables encrypted and incremental backup
+with a number of different services, including google drive
+(which is important, since we have unlimmited storage on Wellesley's gdrive).
+
+### Set up google api and duplicity[^dupgdrive]
+
+There are a bunch of guides online[^dupgdrive] to setting up google drive
+as a backend for `duplicity`.
+The basic procedure is
+
+1. Make yourself an app using google developer console that has
+   the ability to manage gdrive folders
+   (I was able to make one that only had read/write permission on its own folders)
+2. Get the credentials, and save them in a file on your local drive.
+   I used `pass`[^pass] to encrypt these credentials.
+3. Make sure to install right versions of python deps[^pydrive] -
+   you need `httplib2` v.0.15.0 and `google-api-python-client` v1.6
+4. ????
+5. Profit
+
+### Run sync
+
+Assuming you followed the post linked above[^dupgdrive],
+and have your credentials stored in `~/.duplicity/credentials`,
+and a list of files to exclude stored in `~/.duplicity/excludes`,
+
+```sh
+$ GOOGLE_DRIVE_SETTINGS=~/.duplicity/credentials duplicity --exc
+lude-filelist ~/.duplicity/excludes <Drive to backup> "pydrive://develop
+er.gserviceaccount.com/<Subdir on Shared Drive>/?driveID=<Shared Drive ID>"
+```
+
+- `<Drive to backup>` should be replaced with the local path to the drive you want to backup,
+  eg `/lovelace/`
+- `<Subdir on Shared Drive>` should be replaced with a subdirectory on the shared drive,
+  eg `lovelace`
+- `<Shared Drive ID>` should be replaced with the drive ID from google, which is the last part
+  of the URL when you're in the team drive online, eg `0AAFXKrJrjeBbUk9PVA`
+
+  ![Shared Drive ID](/assets/img/gdrive_shared_id.png)
+
+I (Kevin) sent the decryption password to both Vanja and Shelley - hint = "Diamond Sutra"
+
+### References
+
+[^duplicity]: https://launchpad.net/duplicity
+[^dupgdrive]: https://rgarth.github.io/2017/10/29/Grive-and-Duplicity/
+[^pass]: https://www.passwordstore.org/
+[^pydrive]: https://stackoverflow.com/a/61188575/3742902
