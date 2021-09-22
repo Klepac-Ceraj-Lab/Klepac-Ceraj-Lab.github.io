@@ -63,6 +63,6 @@ $ GOOGLE_DRIVE_SETTINGS=~/.duplicity/credentials duplicity --exclude-filelist ~/
 
 [^duplicity]: https://launchpad.net/duplicity
 [^dupgdrive]: https://rgarth.github.io/2017/10/29/Grive-and-Duplicity/
-[^pass]: https://www.passwordstore.org/
+[^pass]: See [this page](pass/) for info on setting up `pass`.
 [^pydrive]: https://stackoverflow.com/a/61188575/3742902
 [^shareddrive]: https://drive.google.com/drive/u/1/folders/0AAFXKrJrjeBbUk9PVA
