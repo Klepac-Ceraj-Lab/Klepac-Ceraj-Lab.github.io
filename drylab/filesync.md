@@ -14,7 +14,7 @@ There is a [Shared Drive][^shareddrive] on google drive for backed up directorie
 with a number of different services, including google drive
 (which is important, since we have unlimmited storage on Wellesley's gdrive).
 
-### Set up google api and duplicity[^dupgdrive]
+### Set up google api and duplicity
 
 There are a bunch of guides online[^dupgdrive] to setting up google drive
 as a backend for `duplicity`.

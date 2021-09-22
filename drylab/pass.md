@@ -1,3 +1,5 @@
+@def title="Pass Password Manager"
+
 # Setting up `pass` password manager
 
 If you're not using a password manager,
