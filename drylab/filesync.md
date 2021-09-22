@@ -7,7 +7,7 @@ title="File Sync and Backup"
 All of the primary [lab drives](computers/) are regularly synced to the cloud using google drive
 (since we have unlimited storage there).
 
-There is a [Shared Drive][^shareddrive] for
+There is a [Shared Drive][^shareddrive] on google drive for backed up directories.
 ## Setting up duplicity
 
 `duplicty`[^duplicity] is a command-line tool that enables encrypted and incremental backup
