@@ -18,6 +18,7 @@ with a number of different services, including google drive
 
 There are a bunch of guides online[^dupgdrive] to setting up google drive
 as a backend for `duplicity`.
+If you're setting up gdrive for the first time, follow the tutorial [found here](https://rgarth.github.io/2017/10/29/Grive-and-Duplicity/).
 The basic procedure is
 
 1. Make yourself an app using google developer console that has
@@ -61,8 +62,8 @@ $ GOOGLE_DRIVE_SETTINGS=~/.duplicity/credentials duplicity --exclude-filelist ~/
 
 ## References
 
-[^duplicity]: https://launchpad.net/duplicity
-[^dupgdrive]: https://rgarth.github.io/2017/10/29/Grive-and-Duplicity/
+[^duplicity]: [Duplicity](https://gitlab.com/duplicity/duplicity) is a program for making encrypted backups. Install it with `sudo apt install duplicity` (linux) or `brew install duplicity` (mac)
+[^dupgdrive]: [Follow this tutorial](https://rgarth.github.io/2017/10/29/Grive-and-Duplicity/) when setting up GDrive and duplicity for the first time
 [^pass]: See [this page](pass/) for info on setting up `pass`.
 [^pydrive]: https://stackoverflow.com/a/61188575/3742902
 [^shareddrive]: https://drive.google.com/drive/u/1/folders/0AAFXKrJrjeBbUk9PVA
