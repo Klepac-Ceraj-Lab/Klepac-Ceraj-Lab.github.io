@@ -4,6 +4,10 @@ title="File Sync and Backup"
 
 # File Sync and Backup
 
+All of the primary [lab drives](computers/) are regularly synced to the cloud using google drive
+(since we have unlimited storage there).
+
+There is a [Shared Drive][^shareddrive] for
 ## Setting up duplicity
 
 `duplicty`[^duplicity] is a command-line tool that enables encrypted and incremental backup
@@ -61,3 +65,4 @@ $ GOOGLE_DRIVE_SETTINGS=~/.duplicity/credentials duplicity --exclude-filelist ~/
 [^dupgdrive]: https://rgarth.github.io/2017/10/29/Grive-and-Duplicity/
 [^pass]: https://www.passwordstore.org/
 [^pydrive]: https://stackoverflow.com/a/61188575/3742902
+[^shareddrive]: https://drive.google.com/drive/u/1/folders/0AAFXKrJrjeBbUk9PVA
