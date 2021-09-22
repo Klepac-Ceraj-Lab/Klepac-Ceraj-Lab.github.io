@@ -26,16 +26,14 @@ The basic procedure is
 4. ????
 5. Profit
 
-### Run sync
+## Run sync
 
 Assuming you followed the post linked above[^dupgdrive],
 and have your credentials stored in `~/.duplicity/credentials`,
 and a list of files to exclude stored in `~/.duplicity/excludes`,
 
 ```sh
-$ GOOGLE_DRIVE_SETTINGS=~/.duplicity/credentials duplicity --exc
-lude-filelist ~/.duplicity/excludes <Drive to backup> "pydrive://develop
-er.gserviceaccount.com/<Subdir on Shared Drive>/?driveID=<Shared Drive ID>"
+$ GOOGLE_DRIVE_SETTINGS=~/.duplicity/credentials duplicity --exclude-filelist ~/.duplicity/excludes <source directory> "pydrive://developer.gserviceaccount.com/<Subdir on Shared Drive>/?driveID=<Shared Drive ID>"
 ```
 
 - `<Drive to backup>` should be replaced with the local path to the drive you want to backup,
@@ -49,7 +47,15 @@ er.gserviceaccount.com/<Subdir on Shared Drive>/?driveID=<Shared Drive ID>"
 
 I (Kevin) sent the decryption password to both Vanja and Shelley - hint = "Diamond Sutra"
 
-### References
+## Downloading
+
+To restore the backup, just reverse the source and destination arguments, eg:
+
+```sh
+$ GOOGLE_DRIVE_SETTINGS=~/.duplicity/credentials duplicity --exclude-filelist ~/.duplicity/excludes "pydrive://developer.gserviceaccount.com/<Subdir on Shared Drive>/?driveID=<Shared Drive ID>" <destination directory> 
+```
+
+## References
 
 [^duplicity]: https://launchpad.net/duplicity
 [^dupgdrive]: https://rgarth.github.io/2017/10/29/Grive-and-Duplicity/
