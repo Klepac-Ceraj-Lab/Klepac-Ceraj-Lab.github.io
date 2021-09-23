@@ -1,0 +1,93 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/jtd.css"> <link rel=icon  href="/assets/favicon.ico"> <title>Pass Password Manager</title> <div class=page-wrap > <div class=side-bar > <div class=header > <a href="/" class=title > VKC Lab Protocols </a> </div> <label for=show-menu  class=show-menu >MENU</label> <input type=checkbox  id=show-menu  role=button > <div class=menu  id=side-menu > <ul class=menu-list > <li class="menu-list-item "><a href="/" class="menu-list-link ">Home</a> <li class="menu-list-item "><a href="/wetlab/" class="menu-list-link ">Wet Lab Protocols</a> <li class="menu-list-item active"><a href="/drylab/" class="menu-list-link ">Dry Lab Protocols</a> <li class="menu-list-item "><a href="/handbook/" class="menu-list-link ">Lab Handbook</a> <ul class="menu-list-child-list "> <li class="menu-list-item "><a href="#" class=menu-list-link >Submenu</a> </ul> </ul> </div> <div class=footer > This is <em>Just the docs</em>, adapted from the <a href="https://github.com/pmarsceill/just-the-docs" target=_blank >Jekyll theme</a>. </div> </div> <div class=main-content-wrap > <div class=main-content > <div class=main-header > <a id=github  href="//github.com/tlienart/Franklin.jl">Franklin on GitHub</a> </div> <div class=franklin-content ><h1 id=setting_up_pass_password_manager ><a href="#setting_up_pass_password_manager" class=header-anchor >Setting up <code>pass</code> password manager</a></h1> <p>If you&#39;re not using a password manager, you really should be. And if you need a password manager for the command line, &#91;<code>pass</code>&#93;<sup id="fnref:pass"><a href="#fndef:pass" class=fnref >[1]</a></sup> is the way to go. But it takes some setup.</p> <h2 id=install ><a href="#install" class=header-anchor >Install</a></h2> <p>The lab servers should already have <code>pass</code> installed and available for all users. <code>pass</code> can be installed with most linux package managers &#40;eg <code>sudo apt install pass</code>&#41; or on a Mac with &#91;<code>Homebrew</code>&#93;<sup id="fnref:brew"><a href="#fndef:brew" class=fnref >[2]</a></sup> &#40;<code>brew install pass</code>&#41;.</p> <h2 id=set_up_gpg_keys ><a href="#set_up_gpg_keys" class=header-anchor >Set up GPG keys</a></h2> <p><code>Pass</code> will encrypt your passwords using &quot;GNU privacy guard&quot; &#40;<code>GPG</code>&#41;. This is a &#91;key-pair based encryption&#93;<sup id="fnref:keypair"><a href="#fndef:keypair" class=fnref >[3]</a></sup> scheme, so the first thing you need to do is create your key pairs. There&#39;s a handy guide on &#91;github&#93;<sup id="fnref:githubgpg"><a href="#fndef:githubgpg" class=fnref >[4]</a></sup>, but I&#39;ll walk through it here.</p> <p>From the command line, run <code>gpg --full-generate-key</code> and follow the prompts. You can use the default options for just about everything,</p> <ol> <li><p>Use <code>RSA</code> encryption</p> <li><p>Use 3072 bits &#40;up to 4096 is fine&#41;</p> <li><p>OK for the key to not expire, but more secure to set expiration &#40;eg 1y&#41;</p> <li><p>Enter your name and wellesley email address &#40;note is not required&#41;</p> <li><p>Enter a <em>strong password that you will remember</em> &#40;this key will give access to all your other passwords, so make sure it&#39;s secure and don&#39;t share it&#41;</p> </ol> <p>Expanding on point 5 - this is in principle the last password you&#39;ll ever need to remember, It needs to be <strong>really</strong> secure, but also easy to remember. You can follow <a href="https://preshing.com/20110811/xkcd-password-generator/">this example</a>, &#40;that site also has a generator, but you can also make your own&#41;.</p> <p>Here&#39;s an example of the command line output:</p> <pre><code class="sh hljs">❯ gpg --full-generate-key
+gpg (GnuPG) 2.2.20; Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+gpg: keybox <span class=hljs-string >&#x27;/home/kevin/.gnupg/pubring.kbx&#x27;</span> created
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+  (14) Existing key from card
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize <span class=hljs-keyword >do</span> you want? (3072)
+Requested keysize is 3072 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &lt;n&gt;  = key expires <span class=hljs-keyword >in</span> n days
+      &lt;n&gt;w = key expires <span class=hljs-keyword >in</span> n weeks
+      &lt;n&gt;m = key expires <span class=hljs-keyword >in</span> n months
+      &lt;n&gt;y = key expires <span class=hljs-keyword >in</span> n years
+Key is valid <span class=hljs-keyword >for</span>? (0) 0
+Key does not expire at all
+Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: Kevin Bonham
+Email address: kbonham@wellesley.edu
+Comment: pass key
+You selected this USER-ID:
+    <span class=hljs-string >&quot;Kevin Bonham (pass key) &lt;kbonham@wellesley.edu&gt;&quot;</span>
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O</code></pre> <h2 id=initialize_password_store ><a href="#initialize_password_store" class=header-anchor >Initialize password store</a></h2> <p>Now that you have a GPG key pair, you can use it to encrypt your <code>pass</code> password store. First, double check where the GPG keys are, probably in <code>~/.gnupg/</code>:</p> <pre><code class="sh hljs">❯ gpg --list-secret-keys
+/home/kevin/.gnupg/pubring.kbx
+------------------------------
+sec   rsa3072 2021-09-21 [SC]
+      66CA3CDE333F5DC2F8D93D375402F446ABFD7FDB
+uid           [ultimate] Kevin Bonham (pass key) &lt;kbonham@wellesley.edu&gt;
+ssb   rsa3072 2021-09-21 [E]</code></pre> <p>What we need is that long hexedecimal number, which we&#39;ll give to <code>pass init</code>:</p> <pre><code class="sh hljs">❯ pass init 66CA3CDE333F5DC2F8D93D375402F446ABFD7FDB
+mkdir: created directory <span class=hljs-string >&#x27;/home/kevin/.password-store/&#x27;</span>
+Password store initialized <span class=hljs-keyword >for</span> 66CA3CDE333F5DC2F8D93D375402F446ABFD7FDB</code></pre> <p>That&#39;s it&#33; Now you&#39;re ready to start storing passwords.</p> <h2 id=using_pass ><a href="#using_pass" class=header-anchor >Using <code>pass</code></a></h2> <p>There are many examples of usage on the &#91;<code>pass</code>&#93;<sup id="fnref:pass"><a href="#fndef:pass" class=fnref >[1]</a></sup> website, but the primary uses &#40;for me&#41; are:</p> <ol> <li><p>Storing secure passwords</p> <li><p>Creating secure passwords</p> <li><p>Retrieving secure passwords.</p> </ol> <h3 id=storing_passwords ><a href="#storing_passwords" class=header-anchor >Storing passwords</a></h3> <p>If you already have passwords that you want to store, it&#39;s pretty easy:</p> <pre><code class="sh hljs">❯ pass insert <span class=hljs-built_in >test</span>
+Enter password <span class=hljs-keyword >for</span> <span class=hljs-built_in >test</span>:
+Retype password <span class=hljs-keyword >for</span> <span class=hljs-built_in >test</span>:
+
+❯ pass ls
+Password Store
+└── <span class=hljs-built_in >test</span></code></pre> <p>Here, <code>test</code> is the name of the password. But we can make them much more informative / organized. For example, let&#39;s say I want to store some passwords for Wellesley, and some for personal use.</p> <pre><code class="sh hljs">❯ pass insert wellesley/gmail
+mkdir: created directory <span class=hljs-string >&#x27;/home/kevin/.password-store/wellesley&#x27;</span>
+Enter password <span class=hljs-keyword >for</span> wellesley/gmail:
+Retype password <span class=hljs-keyword >for</span> wellesley/gmail:
+
+❯ pass insert personal/gmail
+mkdir: created directory <span class=hljs-string >&#x27;/home/kevin/.password-store/personal&#x27;</span>
+Enter password <span class=hljs-keyword >for</span> personal/gmail:
+Retype password <span class=hljs-keyword >for</span> personal/gmail:
+
+❯ pass insert personal/facebook
+Enter password <span class=hljs-keyword >for</span> personal/facebook:
+Retype password <span class=hljs-keyword >for</span> personal/facebook:
+
+❯ pass ls
+Password Store
+├── personal
+│   ├── facebook
+│   └── gmail
+├── <span class=hljs-built_in >test</span>
+└── wellesley
+    └── gmail</code></pre> <h3 id=generating_passwords ><a href="#generating_passwords" class=header-anchor >Generating Passwords</a></h3> <p>Using short, easy-to remember passwords, or using the same password repeatedly, is insecure, and happily isn&#39;t necessary when you have a password manager. <code>pass</code> will make randomly generated secure passwords for you, then store them.</p> <pre><code class="sh hljs">❯ pass generate wellesley/other-test 20
+The generated password <span class=hljs-keyword >for</span> wellesley/other-test is:
+n2~]pirsO+miQH4<span class=hljs-comment >#Jkn?</span>
+
+❯ pass ls wellesley
+wellesley
+├── gmail
+└── other-test</code></pre> <p>Here, the <code>20</code> at the end is the length of the password. You can use <code>-n</code> &#40;or <code>--no-symbols</code>&#41; to use only letters and numbers, and use <code>-c</code> to put the password on your clipboard instead of printing it to the screen.</p> <h3 id=retrieving_passwords ><a href="#retrieving_passwords" class=header-anchor >Retrieving Passwords</a></h3> <p>To get a password, simply do <code>pass &lt;name of password&gt;</code>. If you forget what you&#39;ve named a password, just do <code>pass ls</code> &#40;or even just <code>pass</code>&#41;, optionally including a subfolder.</p> <pre><code class="julia hljs">❯ pass
+Password Store
+├── personal
+│   ├── facebook
+│   └── gmail
+├── test
+└── wellesley
+    ├── gmail
+    └── other-test
+
+❯ pass personal
+personal
+├── facebook
+└── gmail
+
+❯ pass personal/facebook
+youshouldntusefacebook</code></pre> <p>Note, when I entered the last command, a dialogue popped up that asked me to enter my <strong>GPG key</strong> password. This won&#39;t happen every time, but about once per hour or so by default &#40;it is possible to change it&#41;.</p> <p>You can also put the password directly onto your clipboard if you use <code>-c</code>.</p> <h2 id=conclusions ><a href="#conclusions" class=header-anchor >Conclusions</a></h2> <p>That&#39;s it&#33; You can now use <code>pass</code> for all your password needs. You can also use <code>git</code> to keep a version-controlled record of your passwords and sync them &#40;in encrypted form&#41; to other devices, use it on your phone etc.</p> <p>You can also securely store notes and other information, and pipe passwords to other command line tools. Enjoy&#33;</p> <h2 id=references ><a href="#references" class=header-anchor >References</a></h2> <p><table class=fndef  id="fndef:pass"> <tr> <td class=fndef-backref ><a href="#fnref:pass">[1]</a> <td class=fndef-content >https://passwordstore.org </table> <table class=fndef  id="fndef:brew"> <tr> <td class=fndef-backref ><a href="#fnref:brew">[2]</a> <td class=fndef-content >https://brew.sh </table> <table class=fndef  id="fndef:keypair"> <tr> <td class=fndef-backref ><a href="#fnref:keypair">[3]</a> <td class=fndef-content >It&#39;s not super important to understand this, but GPG is widely used and very secure. You can read more about the methodology here: https://en.wikipedia.org/wiki/Public-key_cryptography </table> <table class=fndef  id="fndef:githubgpg"> <tr> <td class=fndef-backref ><a href="#fnref:githubgpg">[4]</a> <td class=fndef-content >https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key </table> </p> <div class=page-foot > <div class=copyright > &copy; VKC Lab Staff | Last modified: September 23, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. </div> </div> </div> </div> </div> </div> <!-- end of class page-wrap-->
