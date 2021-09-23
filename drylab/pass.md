@@ -12,7 +12,7 @@ But it takes some setup.
 
 The lab servers should already have `pass` installed
 and available for all users.
-pass` can be installed with most linux package managers
+`pass` can be installed with most linux package managers
 (eg `sudo apt install pass`) or on a Mac with [`Homebrew`][^brew] (`brew install pass`).
 
 ## Set up GPG keys

@@ -64,6 +64,6 @@ $ GOOGLE_DRIVE_SETTINGS=~/.duplicity/credentials duplicity --exclude-filelist ~/
 
 [^duplicity]: [Duplicity](https://gitlab.com/duplicity/duplicity) is a program for making encrypted backups. Install it with `sudo apt install duplicity` (linux) or `brew install duplicity` (mac)
 [^dupgdrive]: [Follow this tutorial](https://rgarth.github.io/2017/10/29/Grive-and-Duplicity/) when setting up GDrive and duplicity for the first time
-[^pass]: See [this page](pass/) for info on setting up `pass`.
+[^pass]: See [this page](/drylab/pass/) for info on setting up `pass`.
 [^pydrive]: https://stackoverflow.com/a/61188575/3742902
 [^shareddrive]: https://drive.google.com/drive/u/1/folders/0AAFXKrJrjeBbUk9PVA
