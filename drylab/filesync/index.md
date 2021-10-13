@@ -7,7 +7,16 @@ title="File Sync and Backup"
 All of the primary [lab drives](computers/) are regularly synced to the cloud using google drive
 (since we have unlimited storage there).
 
-There is a [Shared Drive][^shareddrive] on google drive for backed up directories.
+There is a Shared Drive[^shareddrive] on google drive for backed up directories.
+The content of these drives can not be accessed directly,
+they are encrypted chunks of bytes.
+
+## Instructions
+
+- If you have never set up sync before, [follow the instructions below](#setting_up_duplicity)
+- If you need to sync from a local drive to the cloud (eg as part of the [download and archive protocol](../download)), then [go here](backup).
+- If you need to restore a backup from the cloud to your local drive, [go here](restore).
+
 ## Setting up duplicity
 
 `duplicty`[^duplicity] is a command-line tool that enables encrypted and incremental backup
@@ -41,7 +50,7 @@ and a list of files to exclude stored in `~/.duplicity/excludes`,
 $ GOOGLE_DRIVE_SETTINGS=~/.duplicity/credentials duplicity --exclude-filelist ~/.duplicity/excludes <source directory> "pydrive://developer.gserviceaccount.com/<Subdir on Shared Drive>/?driveID=<Shared Drive ID>"
 ```
 
-- `<Drive to backup>` should be replaced with the local path to the drive you want to backup,
+- `<source directory>` should be replaced with the local path to the drive you want to backup,
   eg `/lovelace/`
 - `<Subdir on Shared Drive>` should be replaced with a subdirectory on the shared drive,
   eg `lovelace`
@@ -53,6 +62,8 @@ $ GOOGLE_DRIVE_SETTINGS=~/.duplicity/credentials duplicity --exclude-filelist ~/
 I (Kevin) sent the decryption password to both Vanja and Shelley - hint = "Diamond Sutra"
 
 ## Downloading
+
+<!-- TODO: Move this to sub-page -->
 
 To restore the backup, just reverse the source and destination arguments, eg:
 

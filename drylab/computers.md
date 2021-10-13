@@ -26,7 +26,7 @@ if you're unsure about which computer system(s) you'll need to use.
   or incubation chambers.
 
 
-## `hopper`
+## hopper
 
 **Primary Administrator**: Kevin
 
@@ -36,7 +36,7 @@ if you're unsure about which computer system(s) you'll need to use.
   - 10 Tb HDD
   - WD Elements
 
-## `ada`
+## ada
 
 **Primary Administrator**: Kevin
 
@@ -49,7 +49,7 @@ if you're unsure about which computer system(s) you'll need to use.
   - 2 Tb SSD
   - WD Passport
 
-## `rosalind`
+## rosalind
 
 **Primary Administrator**: Shelley
 
