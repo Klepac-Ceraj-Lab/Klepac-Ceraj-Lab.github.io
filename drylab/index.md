@@ -21,5 +21,5 @@ or need access to lab computers or servers, complete the following protocols:
 
 ## Getting sequencing results
 
-- [Downloading and archiving](download/)
+- [Downloading and archiving sequencing files](download/)
 - [Sync and Backup](filesync/)

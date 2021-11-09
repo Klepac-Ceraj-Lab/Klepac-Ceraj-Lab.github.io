@@ -2,10 +2,12 @@
 title="Cloud Backup"
 +++
 
+# Backing up files to Google Drive
+
 This page contains instructions for doing **incremental backup**
 of lab hard drives to google drive.
-If you're looking for information on transferring files
-between different computers, [see here](rsync.md).
+If you're looking for information on the day-to-day transferring of files
+between different computers, [see here](../rsync).
 
 ## Before getting started
 
