@@ -32,9 +32,13 @@ if you're unsure about which computer system(s) you'll need to use.
 
 ### Hard-drives
 
-- `/grace/`: General purpose
+- `/grace/`: General purpose, long-term storage
   - 10 Tb HDD
   - WD Elements
+- `/brewster`: High-speed access, databases, scratch space
+  - 2 Tb NVMe
+- `/murray`: High-speed access, scratch space
+  - 2 Tb SSD
 
 ## ada
 
