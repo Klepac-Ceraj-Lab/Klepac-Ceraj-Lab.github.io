@@ -49,6 +49,7 @@ The basic procedure is
 
 - [Back up a drive to Google Drive using `duplicity`](backup)
 - [Restore a drive from Google Drive using `duplicity`](restore)
+
 ## References
 
 [^duplicity]: [Duplicity](https://gitlab.com/duplicity/duplicity) is a program for making encrypted backups. Install it with `sudo apt install duplicity` (linux) or `brew install duplicity` (mac)
