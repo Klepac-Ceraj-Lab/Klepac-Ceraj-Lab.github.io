@@ -1,7 +1,7 @@
-<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/jtd.css"> <link rel=icon  href="/assets/favicon.ico"> <title>Download sequencing</title> <div class=page-wrap > <div class=side-bar > <div class=header > <a href="/" class=title > VKC Lab Protocols </a> </div> <label for=show-menu  class=show-menu >MENU</label> <input type=checkbox  id=show-menu  role=button > <div class=menu  id=side-menu > <ul class=menu-list > <li class="menu-list-item "><a href="/" class="menu-list-link ">Home</a> <li class="menu-list-item "><a href="/wetlab/" class="menu-list-link ">Wet Lab Protocols</a> <li class="menu-list-item active"><a href="/drylab/" class="menu-list-link ">Dry Lab Protocols</a> <li class="menu-list-item "><a href="/handbook/" class="menu-list-link ">Lab Handbook</a> <ul class="menu-list-child-list "> <li class="menu-list-item "><a href="#" class=menu-list-link >Submenu</a> </ul> </ul> </div> <div class=footer > This is <em>Just the docs</em>, adapted from the <a href="https://github.com/pmarsceill/just-the-docs" target=_blank >Jekyll theme</a>. </div> </div> <div class=main-content-wrap > <div class=main-content > <div class=main-header > <a id=github  href="//github.com/tlienart/Franklin.jl">Franklin on GitHub</a> </div> <div class=franklin-content > <h1 id=dealing_with_sequencing_files ><a href="#dealing_with_sequencing_files" class=header-anchor >Dealing with sequencing files</a></h1> <p>If you&#39;ve got download links from the Integrated Microbial Resource &#40;IMR&#41; or another outfit that generates <strong>metagenomics</strong> &#40;mgx&#41; or <strong>amplicon</strong> &#40;eg 16S or ITS&#41; sequencing reads, you&#39;re in the right place. If not, you might consider looking at</p> <ul> <li><p>TODO: build out this list</p> </ul> <h2 id=instructions_for_downloading_and_archiving_sequencing_files ><a href="#instructions_for_downloading_and_archiving_sequencing_files" class=header-anchor >Instructions for downloading and archiving sequencing files</a></h2> <p>When an e-mail comes in from the sequencing facility indicating that raw sequences are ready, perform the following protocol.</p> <p><strong>NOTE:</strong> If the sequencing center sends multiple links for a single batch, See bottom of this page for special notes.</p> <h3 id=download_the_zip_file_from_dropbox_to_the_g-drive_attached_to_rosalind ><a href="#download_the_zip_file_from_dropbox_to_the_g-drive_attached_to_rosalind" class=header-anchor >Download the <code>zip</code> file from dropbox to the G-Drive attached to <code>rosalind</code></a></h3> <p>The sequencing facility will e-mail a dropbox link, such as <code>https://www.dropbox.com/s/52468hvj9cmcizq/RowlandMetaG.zip?dl&#61;1</code>. The <code>?dl&#61;1</code> at the end is important, if it&#39;s not there it can be added &#40;or if it&#39;s <code>?dl&#61;0</code>, change it to <code>?dl&#61;1</code>&#41;.</p> <p>Log in or <code>ssh</code> into <code>rosalind</code> &#40;the large Mac in the lab&#41;, and open the terminal app. Start a new <code>tmux</code> session in your terminal window.</p> <pre><code class="sh hljs">$ tmux new -s seq
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/jtd.css"> <link rel=icon  href="/assets/favicon.ico"> <title>Download sequencing</title> <div class=page-wrap > <div class=side-bar > <div class=header > <a href="/" class=title > VKC Lab Protocols </a> </div> <label for=show-menu  class=show-menu >MENU</label> <input type=checkbox  id=show-menu  role=button > <div class=menu  id=side-menu > <ul class=menu-list > <li class="menu-list-item "><a href="/" class="menu-list-link ">Home</a> <li class="menu-list-item "><a href="/wetlab/" class="menu-list-link ">Wet Lab Protocols</a> <li class="menu-list-item active"><a href="/drylab/" class="menu-list-link ">Dry Lab Protocols</a> <li class="menu-list-item "><a href="/handbook/" class="menu-list-link ">Lab Handbook</a> <ul class="menu-list-child-list "> <li class="menu-list-item "><a href="#" class=menu-list-link >Submenu</a> </ul> </ul> </div> <div class=footer > This is <em>Just the docs</em>, adapted from the <a href="https://github.com/pmarsceill/just-the-docs" target=_blank >Jekyll theme</a>. </div> </div> <div class=main-content-wrap > <div class=main-content > <div class=main-header > <a id=github  href="//github.com/Klepac-Ceraj-Lab">The VKC Lab on GitHub</a> </div> <div class=franklin-content > <h1 id=dealing_with_sequencing_files ><a href="#dealing_with_sequencing_files" class=header-anchor >Dealing with sequencing files</a></h1> <p>If you&#39;ve got download links from the Integrated Microbial Resource &#40;IMR&#41; or another outfit that generates <strong>metagenomics</strong> &#40;mgx&#41; or <strong>amplicon</strong> &#40;eg 16S or ITS&#41; sequencing reads, you&#39;re in the right place. If not, you might consider looking at</p> <ul> <li><p>TODO: build out this list</p> </ul> <h2 id=instructions_for_downloading_and_archiving_sequencing_files ><a href="#instructions_for_downloading_and_archiving_sequencing_files" class=header-anchor >Instructions for downloading and archiving sequencing files</a></h2> <p>When an e-mail comes in from the sequencing facility indicating that raw sequences are ready, perform the following protocol.</p> <p><strong>NOTE:</strong> If the sequencing center sends multiple links for a single batch, See bottom of this page for special notes.</p> <h3 id=download_the_zip_file_from_dropbox_to_the_g-drive_attached_to_rosalind ><a href="#download_the_zip_file_from_dropbox_to_the_g-drive_attached_to_rosalind" class=header-anchor >Download the <code>zip</code> file from dropbox to the G-Drive attached to <code>rosalind</code></a></h3> <p>The sequencing facility will e-mail a dropbox link, such as <code>https://www.dropbox.com/s/52468hvj9cmcizq/RowlandMetaG.zip?dl&#61;1</code>. The <code>?dl&#61;1</code> at the end is important, if it&#39;s not there it can be added &#40;or if it&#39;s <code>?dl&#61;0</code>, change it to <code>?dl&#61;1</code>&#41;.</p> <p>Log in or <code>ssh</code> into <code>rosalind</code> &#40;the large Mac in the lab&#41;, and open the terminal app. Start a new <code>tmux</code> session in your terminal window.</p> <pre><code class="sh hljs">$ tmux new -s <span class=hljs-built_in >seq</span>
 <span class=hljs-comment ># seq = [name of session]</span>
 <span class=hljs-comment ># Re-attach to tmux session</span>
-$ tmux a -t seq</code></pre> <p>Change the directory to the echo sequencing folder.</p> <pre><code class="sh hljs">$ <span class=hljs-built_in >cd</span> /Volumes/franklin/<span class=hljs-built_in >echo</span>/sequencing/
+$ tmux a -t <span class=hljs-built_in >seq</span></code></pre> <p>Change the directory to the echo sequencing folder.</p> <pre><code class="sh hljs">$ <span class=hljs-built_in >cd</span> /Volumes/franklin/echo/sequencing/
 $ <span class=hljs-built_in >cd</span> mgx
 <span class=hljs-comment ># (or 16S)</span></code></pre> <p>To download, use the <code>curl</code> program. Replace the url below with the one provided by the sequencing facility.</p> <p>NOTE: The file name below is just an example - use something more specific to prevent overwriting previous sequences. For batches split into multiple dropbox links, add <code>_#</code> to the file name, as shown below.</p> <pre><code class="sh hljs">$ curl -L -o nov2018_1.zip https://www.dropbox.com/s/52468hvj9cmcizq/RowlandMetaG.zip?dl=1</code></pre>
 <p>You will see the download status displayed below the command.</p>
@@ -37,27 +37,27 @@ Archive:  nov2018_1.zip
 <p>This will take a while, and creates a new folder in the current working directory. Once this is finished, check to make sure that all of the files were extracted. The result of <code>ls -l RowlandMetaG</code> &#40;or whatever folder they were extracted into&#41;, especially at the end, should match the content of the <code>_details.txt</code> file.</p>
 <p><em>Note: folder names can be determined from the original dropbox link</em></p>
 <p>for example</p>
-<pre><code class="sh hljs">$ tail -5 details/batch006_details.txt
-mgx tail -5 details/batch006_details.txt
+<pre><code class="sh hljs">$ <span class=hljs-built_in >tail</span> -5 details/batch006_details.txt
+mgx <span class=hljs-built_in >tail</span> -5 details/batch006_details.txt
 152547600  01-10-2019 14:06   RowlandMetaG/M0828-1F-1A_S62_L003_R2_001.fastq.gz
 148739518  01-10-2019 14:15   RowlandMetaG/M0828-1F-1A_S62_L004_R1_001.fastq.gz
 150465356  01-10-2019 14:12   RowlandMetaG/M0828-1F-1A_S62_L004_R2_001.fastq.gz
 ---------                     -------
 77388142279                     529 files
-$ ls RowlandMetaG/ | tail -5
-ls -l  RowlandMetaG/ | tail -5
+$ <span class=hljs-built_in >ls</span> RowlandMetaG/ | <span class=hljs-built_in >tail</span> -5
+<span class=hljs-built_in >ls</span> -l  RowlandMetaG/ | <span class=hljs-built_in >tail</span> -5
 -rw-r--r--  1 kevin  staff  148792326 Jan 10 14:12 M0828-1F-1A_S62_L002_R2_001.fastq.gz
 -rw-r--r--  1 kevin  staff  151575616 Jan 10 14:06 M0828-1F-1A_S62_L003_R1_001.fastq.gz
 -rw-r--r--  1 kevin  staff  152547600 Jan 10 14:06 M0828-1F-1A_S62_L003_R2_001.fastq.gz
 -rw-r--r--  1 kevin  staff  148739518 Jan 10 14:15 M0828-1F-1A_S62_L004_R1_001.fastq.gz
 -rw-r--r--  1 kevin  staff  150465356 Jan 10 14:12 M0828-1F-1A_S62_L004_R2_001.fastq.gz</code></pre>
 <p>You can also test that you have the right number of files:</p>
-<pre><code class="sh hljs">$ ls RowlandMetaG/*.fastq.gz | wc -l
+<pre><code class="sh hljs">$ <span class=hljs-built_in >ls</span> RowlandMetaG/*.fastq.gz | <span class=hljs-built_in >wc</span> -l
     528</code></pre>
 <h3 id=create_batch_filestxt ><a href="#create_batch_filestxt" class=header-anchor >Create <code>batch###_files.txt</code></a></h3>
 <p>We also want a file that contains only the file names, so if we ever need the files from a single batch in the future, we can easily get them. For batches split into multiple folders, make only <strong>one</strong> <code>batch###_files.txt</code> for the batch.</p>
 <p><em>Note: if 16S samples, label 16S</em>batch###_</p>
-<pre><code class="sh hljs">$ ls RowlandMetaG | grep fastq.gz
+<pre><code class="sh hljs">$ <span class=hljs-built_in >ls</span> RowlandMetaG | grep fastq.gz
 C0047-7F-1A_S9_L001_R1_001.fastq.gz
 C0047-7F-1A_S9_L001_R2_001.fastq.gz
 C0047-7F-1A_S9_L002_R1_001.fastq.gz
@@ -65,14 +65,14 @@ C0047-7F-1A_S9_L002_R2_001.fastq.gz
 C0047-7F-1A_S9_L003_R1_001.fastq.gz
 <span class=hljs-comment ># ...</span></code></pre>
 <p>Now pipe the results of this command to a file called <code>batch###_files.txt</code>.</p>
-<pre><code class="sh hljs">$ ls RowlandMetaG | grep fastq.gz &gt;&gt; batch006_files.txt</code></pre>
+<pre><code class="sh hljs">$ <span class=hljs-built_in >ls</span> RowlandMetaG | grep fastq.gz &gt;&gt; batch006_files.txt</code></pre>
 <h3 id=create_batchmd5 ><a href="#create_batchmd5" class=header-anchor >Create batch###.md5</a></h3>
 <p>To reduce the overhead of checking the integrity of these files in the future, we&#39;ll use <code>md5sum</code> which creates a hash of the file contents &#40;note - this may also take a while&#41;. Create a <code>.md5</code> for each part of a batch.</p>
 <p><em>Note: if 16S samples, label 16S</em>batch###_</p>
 <pre><code class="sh hljs">$ <span class=hljs-built_in >cd</span> RowlandMetaG_1
 $ md5sum *.fastq.gz &gt; ../details/batch006_1.md5</code></pre>
 <p>Which looks like this:</p>
-<pre><code class="sh hljs">$ head -5 ../details/batch006_1.md5
+<pre><code class="sh hljs">$ <span class=hljs-built_in >head</span> -5 ../details/batch006_1.md5
 66f8abc4a71d7ed945ae6a487629816c  C0047-7F-1A_S9_L001_R1_001.fastq.gz
 68801cafb15d7993e7542e1c7e152147  C0047-7F-1A_S9_L001_R2_001.fastq.gz
 292b2ed5a70872b536997bace2ed4b89  C0047-7F-1A_S9_L002_R1_001.fastq.gz
@@ -80,9 +80,9 @@ $ md5sum *.fastq.gz &gt; ../details/batch006_1.md5</code></pre>
 a98e4c376a5b5bcbaadb8a7fb5f3c3f5  C0047-7F-1A_S9_L003_R1_001.fastq.gz</code></pre>
 <h2 id=verify_that_there_are_no_conflicting_file_names_in_echosequencingmgxrawfastq_or_echosequencing16srawfastq ><a href="#verify_that_there_are_no_conflicting_file_names_in_echosequencingmgxrawfastq_or_echosequencing16srawfastq" class=header-anchor >Verify that there are no conflicting file names in <code>echo/sequencing/mgx/rawfastq</code> or <code>echo/sequencing/16S/rawfastq</code></a></h2>
 <pre><code class="sh hljs">$ <span class=hljs-built_in >cd</span> ..
-$ <span class=hljs-keyword >for</span> f <span class=hljs-keyword >in</span> $(cat batch006_files.txt); <span class=hljs-keyword >do</span> <span class=hljs-keyword >if</span> [ -f rawfastq/<span class=hljs-variable >$f</span> ]; <span class=hljs-keyword >then</span> <span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;<span class=hljs-variable >$f</span> already exists&quot;</span>; <span class=hljs-keyword >fi</span>; <span class=hljs-keyword >done</span></code></pre>
+$ <span class=hljs-keyword >for</span> f <span class=hljs-keyword >in</span> $(<span class=hljs-built_in >cat</span> batch006_files.txt); <span class=hljs-keyword >do</span> <span class=hljs-keyword >if</span> [ -f rawfastq/<span class=hljs-variable >$f</span> ]; <span class=hljs-keyword >then</span> <span class=hljs-built_in >echo</span> <span class=hljs-string >&quot;<span class=hljs-variable >$f</span> already exists&quot;</span>; <span class=hljs-keyword >fi</span>; <span class=hljs-keyword >done</span></code></pre>
 <h2 id=move_files_into_echosequencingmgxrawfastq ><a href="#move_files_into_echosequencingmgxrawfastq" class=header-anchor >Move files into <code>echo/sequencing/mgx/rawfastq</code></a></h2>
-<pre><code class="sh hljs">$ mv -nv RowlandMetaG/* rawfastq/</code></pre>
+<pre><code class="sh hljs">$ <span class=hljs-built_in >mv</span> -nv RowlandMetaG/* rawfastq/</code></pre>
 <h2 id=rsync_files_to_lovelace_and_ntm ><a href="#rsync_files_to_lovelace_and_ntm" class=header-anchor >Rsync files to lovelace and ntm</a></h2>
 <p>Assuming the lab drive on NTM is mounted and can ssh into <code>ada</code> from <code>rosalind</code>.</p>
 <p><em>Note: Run this in a tmux window</em></p>
@@ -122,13 +122,13 @@ $ rsync -avzP /Volumes/franklin/echo/sequencing/mgx/ /Volumes/vkclab/echo/sequen
 
 </ul>
 <pre><code class="sh hljs">$ <span class=hljs-built_in >cd</span> /Volumes/G-DRIVE\ USB-C/ECHO/sequencing/16S/RowlandMetaG
-$ ls | grep -E <span class=hljs-string >&quot;[MC]\d{4}-\d[EF]-\d\w&quot;</span> &gt; files_to_move.txt
+$ <span class=hljs-built_in >ls</span> | grep -E <span class=hljs-string >&quot;[MC]\d{4}-\d[EF]-\d\w&quot;</span> &gt; files_to_move.txt
 $ rsync --files-from=files_to_move.txt RowlandMetaG/ RowlandMetaG_ECHO/
-$ ls RowlandMetaG/ | wc -l
+$ <span class=hljs-built_in >ls</span> RowlandMetaG/ | <span class=hljs-built_in >wc</span> -l
 
-$ ls -lh RowlandMetaG_ECHO/ &gt; details/batch00<span class=hljs-comment >#_details.txt</span>
+$ <span class=hljs-built_in >ls</span> -lh RowlandMetaG_ECHO/ &gt; details/batch00<span class=hljs-comment >#_details.txt</span>
 <span class=hljs-comment ># resulting details.txt file looks different from other details.txt files</span>
-$ ls RowlandMetaG_ECHO/ | grep fastq.gz &gt; batch00<span class=hljs-comment >#_files.txt</span>
+$ <span class=hljs-built_in >ls</span> RowlandMetaG_ECHO/ | grep fastq.gz &gt; batch00<span class=hljs-comment >#_files.txt</span>
 $ <span class=hljs-built_in >cd</span> RowlandMetaG_ECHO
 $ md5sum *.fastq.gz &gt; ../details/batch00<span class=hljs-comment >#.md5</span></code></pre>
 <ul>
@@ -138,7 +138,7 @@ $ md5sum *.fastq.gz &gt; ../details/batch00<span class=hljs-comment >#.md5</span
 
 </ul>
 <pre><code class="sh hljs">$ <span class=hljs-built_in >cd</span> /Volumes/vkclab/RawSequenceData
-$ mkdir IMR_MMMYYYY_mgx
+$ <span class=hljs-built_in >mkdir</span> IMR_MMMYYYY_mgx
 $ rsync -avzP /Volumes/G-DRIVE\ USB-C/ECHO/sequencing/mgx/RowlandMetaG/ IMR_MMMYYYY_mgx/
 $ rsync -avzP /Volumes/G-DRIVE\ USB-C/ECHO/sequencing/16S/RowlandMetaG/details/batch00<span class=hljs-comment >#_all_details.txt IMR_MMMYYYY_mgx/</span>
 $ rsync -avzP /Volumes/G-DRIVE\ USB-C/ECHO/sequencing/16S/RowlandMetaG/batch00<span class=hljs-comment >#_all_files.txt IMR_MMMYYYY_mgx/</span>
@@ -147,11 +147,11 @@ $ rsync -avzP /Volumes/G-DRIVE\ USB-C/ECHO/sequencing/16S/RowlandMetaG/details/b
 <p>If a file was assigned the incorrect <code>SampleID</code> when sent for sequencing, it is best to rename the file during documenting the sequencing files before rsyncing across drives.</p>
 <pre><code class="sh hljs">$ <span class=hljs-keyword >for</span> f <span class=hljs-keyword >in</span> $(find RowlandMetaG_*/*.gz | grep 0604); <span class=hljs-keyword >do</span>
     <span class=hljs-comment ># this syntax says &#x27;use variable f, but replace &quot;0604&quot; with &quot;2018&quot;&#x27;</span>
-    mv -v <span class=hljs-variable >$f</span> <span class=hljs-variable >${f/0604/2018}</span>;
+    <span class=hljs-built_in >mv</span> -v <span class=hljs-variable >$f</span> <span class=hljs-variable >${f/0604/2018}</span>;
   <span class=hljs-keyword >done</span></code></pre>
 <div class=page-foot >
   <div class=copyright >
-    &copy; VKC Lab Staff  | Last modified: September 23, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; VKC Lab Staff  | Last modified: November 09, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div>
