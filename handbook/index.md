@@ -153,7 +153,7 @@ or for independently publishing research papers.
 One of the main goals of a research assistant is to learn the process of science
 and to make a meaningful contribution towards a result.
 
-***Who should perform undergraduate research?***
+**Who should perform undergraduate research?**
 
 Curious and dedicated students
 seeking to broaden their knowledge and skills,
@@ -162,7 +162,7 @@ and students with a desire to engage in a challenging/rewarding experience.
 Undergraduate research is beneficial,
 but requires a commitment of time, energy, and effort from the student.[^ncstate]
 
-***What will I be doing? What are the expectations?***
+**What will I be doing? What are the expectations?**
 
 Projects vary in scope depending on the student’s interests,
 which can definitely change over time!
@@ -226,7 +226,7 @@ Broadly,
 
 #### IB. Performing a Research Project
 
-***Now that I’ve joined the lab, how do I get started?***
+**Now that I’ve joined the lab, how do I get started?**
 
 Research is very different from course work.
 The biggest difference is
@@ -1497,7 +1497,7 @@ with the Wellesley College Institutional Biosafety Committee
 and will provide copies of the approved proposal upon request.
 
 The procedures outlined by
-the [Wellesley College Biological Safety Manual][ehsbio] ****must**** be followed!
+the [Wellesley College Biological Safety Manual][ehsbio] ***must*** be followed!
 
 Pay particular attention to:
 - [Disposal of Biological Waste]
