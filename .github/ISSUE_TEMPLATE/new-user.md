@@ -11,13 +11,13 @@ Please see the [SSH setup page](https://klepac-ceraj-lab.github.io/drylab/ssh/) 
 
 Please fill out the following - 
 
-- Name: 
-- Wellesley email
-- requested username:
-- Server(s) you need access to:
-    - [ ] `ada`
-    - [ ] `hopper`
-    - [ ] `rosalind`
+- **Name**: 
+- **Wellesley email**:
+- **Requested username**:
+- **Server(s) you need access to**:
+  - [ ] `ada`
+  - [ ] `hopper`
+  - [ ] `rosalind`
 
 Paste your public key (eg `ada-key.pub` bellow between the backticks. If you need access to multiple servers, please use a separate key for each.
 
