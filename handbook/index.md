@@ -2,11 +2,10 @@
 
 # Klepac-Ceraj Laboratory Lab Handbook
 
-## Handbook and Research Guidelines
+**2020-2021**
+**v4.1**
 
-**2020-2021**  
-**V 4.1**  
-**Revised May 2020**  
+**Revised May 2020**
 **Vanja Klepac-Ceraj, Ph.D.**
 
 Sections adapted from Farshid Guilak, Duke University;
@@ -14,6 +13,11 @@ Eric Darling, Brown University;
 Louise Darling and Sharon Gobes, Wellesley College;
 Mohamed Noor, Duke University;
 Pat Schloss, Michigan State University
+
+
+**Table of Contents**
+
+\toc
 
 ## Overview
 
@@ -24,20 +28,20 @@ It also explains our expectations of you
 and details your responsibilities within our lab group.
 Please read it carefully
 and talk to Vanja Klepac-Ceraj or Kevin Bonham about anything that you do not understand
-or that differs from your initial expectations.[^5]
+or that differs from your initial expectations.[^mcguire]
 
 While reading the details,
 do not lose sight of the big picture.
 You have an opportunity to work on scientific research
 and to gain satisfaction from exploring a biological question
-while interacting closely with your peers and faculty.[^5]
+while interacting closely with your peers and faculty.[^mcguire]
 We want research to be an exciting and rewarding experience for all!
 
 Every professor’s methodology is slightly different,
 but about 90% of the way that I manage undergraduate research
 is probably common with most science professors at undergraduate institutions.
 It is also likely similar to the experience
-that you would/will have as an undergraduate intern at a company.[^5]
+that you would/will have as an undergraduate intern at a company.[^mcguire]
 
 ### I. Performing a Research Project
 
@@ -52,7 +56,7 @@ but is more manageable.
 Example,
 "Does increased expression of protein X allow adult,
 adipose-derived stem cells to be resistant to chemotherapeutic treatment?"
-Throughout, we follow the scientific method in a continually iterative process.[^5]
+Throughout, we follow the scientific method in a continually iterative process.[^mcguire]
 
 Wellesley College’s mission includes undergraduate education
 (which you are familiar with by now!)
@@ -82,7 +86,7 @@ When you conduct research,
 you are exploring questions for which you may not be sure answers even exist!
 For these and other reasons,
 research can be daunting but also very exciting
-and rewarding (adapted from[^2]).
+and rewarding (adapted from[^iba]).
 
 I find working with undergraduates to be a highly exciting
 and rewarding experience.
@@ -92,11 +96,11 @@ and key fundamental questions about our biological questions
 and research endeavors.
 This keeps me invested, invigorated, and motivated
 and continually reinforces my choice to pursue a career in academia
-at a Primarily Undergraduate Institution (PUI) (adapted from[^4]).
+at a Primarily Undergraduate Institution (PUI) (adapted from[^luong]).
 
 Undergraduate research,
 with challenges and opportunities that are distinct from the classroom,
-can be valuable for undergraduate students for a variety of reasons including ^(adapted\ from [^1] and [^5]):
+can be valuable for undergraduate students for a variety of reasons including ^(adapted\ from [^ncstate] and [^mcguire]):
 
 1. *Development of laboratory skills*:
 Undergraduate students can gain in-depth,
@@ -156,7 +160,7 @@ seeking to broaden their knowledge and skills,
 those eager to learn more about science,
 and students with a desire to engage in a challenging/rewarding experience.
 Undergraduate research is beneficial,
-but requires a commitment of time, energy, and effort from the student.[^1]
+but requires a commitment of time, energy, and effort from the student.[^ncstate]
 
 ***What will I be doing? What are the expectations?***
 
@@ -183,7 +187,7 @@ Finally,
 through reflection you need to explore what you learned
 from your responses to the questions.
 Do the results lay to rest one or more of the previous questions?
-Do the responses suggest yet other questions?[^2]
+Do the responses suggest yet other questions?[^iba]
 Now rinse
 and repeat!
 
@@ -213,7 +217,7 @@ Broadly,
   in completing these agreed-upon units of work
   will be reflected in my evaluation of you (via a grade or recommendation letter),
   but much more importantly,
-  they will strongly influence the likelihood of the project's success.[^2]
+  they will strongly influence the likelihood of the project's success.[^iba]
 - You will support our lab group
     - Presenting for visitors or interested students
     - Cleaning and maintaining the lab environment
@@ -235,7 +239,7 @@ You will grow to be a lot more independent than in a course,
 with less structure.
 This means that you have to be proactive about seeking information,
 devising smaller experiments,
-and structuring your workday.[^5]
+and structuring your workday.[^mcguire]
 
 Solving the problem in research
 is often not as important as *how* you solve it.
@@ -249,7 +253,7 @@ based on what has been done before.
 A scientist must discuss
 how his or her work differs from what has been previously done,
 and to do that,
-must also be aware of a huge body of work.[^5]
+must also be aware of a huge body of work.[^mcguire]
 
 All individuals performing research
 will work with the Principle Investigator (PI),
@@ -325,7 +329,7 @@ The principal steps are:
       as a simple error early on could invalidate all of your data.
 1. **Keep all data neatly organized in a laboratory notebook that remains in the lab.**
 
-**What about when I’m not sure what I’m supposed to be doing?**[^3]
+**What about when I’m not sure what I’m supposed to be doing?**[^guidelines]
 
 It is the responsibility of the research student
 to find a way to advance your project!
@@ -350,7 +354,7 @@ and/or is unsure of the timeline for completion,
 please contact your PI to ask or clarify.
 
 **How will my work
-and contributions be recognized?**[^5]
+and contributions be recognized?**[^mcguire]
 
 Another benefit of working as a research assistant
 is that it can be an important step towards a career in many scientific fields
@@ -410,7 +414,7 @@ or alter a data set for any reason.
 In research,
 we have to be our own harshest critics,
 verifying all results
-and testing alternative hypotheses.[^5]
+and testing alternative hypotheses.[^mcguire]
 
 You absolutely must act ethically
 and carefully in all of your work.
@@ -430,7 +434,7 @@ whether our use is non-commercial,
 or whether you are a student.
 Permission is still needed each
 and every time you use or reference someone else’s intellectual contributions
-and/or work.[^5]
+and/or work.[^mcguire]
 
 Until research is published,
 it is essential that our ideas,
@@ -467,7 +471,7 @@ All experimental investigations,
 even those in the theoretical or planning stages,
 are the intellectual property of the Klepac-Ceraj lab and/or Wellesley College.
 You may not take ideas, protocols, equipment, reagents, samples, etc.
-from our lab without first discussing with the PI.[^5]
+from our lab without first discussing with the PI.[^mcguire]
 
 As mentioned above,
 our work should generally be treated as confidential.
@@ -569,7 +573,7 @@ prior to dismissal from the lab.
 My goal is to help everyone in this group to become
 a productive, creative and independent scientist.
 I want you to be
-passionate, kind, self-directed, and rigorous[^7].
+passionate, kind, self-directed, and rigorous[^Schloss].
 
 **Expectations and Requirements:**
 
@@ -841,7 +845,7 @@ to be considered an excellent researcher.
 I evaluate research students evenly
 on both the process of research as well as on the research product
 (typically a written document).
-There is a rubric[^6] below for each of these to help set clear expectations for evaluation.
+There is a rubric[^gmu] below for each of these to help set clear expectations for evaluation.
 
 <!-- NOTE: this section (rubrics) has not been formatted... tables need a lot of work
 I split it out into `handbook_rubrics.md`-->
@@ -853,7 +857,7 @@ I split it out into `handbook_rubrics.md`-->
 #### IIIA. Weekly Group Meetings
 
 **Introduction:** We will have weekly group meetings.
-The purpose of our weekly lab meetings is to[^8]:
+The purpose of our weekly lab meetings is to[^lena]:
 
 1. Share ideas
 1. To practice communication skills
@@ -1030,7 +1034,7 @@ and updated online.
    in the file cabinet in lab.
 1. Record on the item your initials (e.g., VKC),
    the date received, the date opened, and the expiration date.
-    1. For chemicals add the information to the [chemical logbook][1]
+    1. For chemicals add the information to the [chemical logbook][chemlog]
 
 
 ### V. RULES, POLICIES and PROTOCOLS
@@ -1146,9 +1150,9 @@ Wearing open-toed shoes or shorts in these areas violates OSHA regulations.
 General safety: All lab employees,
 are required to take the Wellesley safety training.
 They should also take time on their first day
-to peruse the Wellesley [Safety website][2],
+to peruse the Wellesley [Safety website][labsafety],
 including specifically the safety manuals,
-how to access [Material Safety Data Sheets][3], etc.
+how to access [Material Safety Data Sheets][msds], etc.
 Consult with the laboratory PI at any time
 regarding any concerns you have about chemicals you are using.
 Ultimately, your safety is your own responsibility.
@@ -1373,7 +1377,7 @@ All laboratory property and keys must be returned.
 _Every question is appropriate and valuable!_**
 
 All information here is supplemental to and does not override
-[Wellesley’s Laboratory Safety][4]
+[Wellesley’s Laboratory Safety][ehslab]
 policies, guidelines, and requirements.
 
 You are responsible for reading and understanding
@@ -1493,7 +1497,7 @@ with the Wellesley College Institutional Biosafety Committee
 and will provide copies of the approved proposal upon request.
 
 The procedures outlined by
-the [Wellesley College Biological Safety Manual][5] ****must**** be followed!
+the [Wellesley College Biological Safety Manual][ehsbio] ****must**** be followed!
 
 Pay particular attention to:
 - [Disposal of Biological Waste]
@@ -1543,7 +1547,7 @@ as well as some commonly used procedures.
 
 *Before beginning any biosafety level II microbiological work*,
 you must watch and affirm your understanding
-of the [use of Biological Safety Cabinets][6]
+of the [use of Biological Safety Cabinets][safetycab]
 
 
 
@@ -1687,7 +1691,7 @@ before the first lab meeting of the academic year**
 
 This requires a github account.
 If you do not already have a github account,
-you can sign up for one [here][7].
+you can sign up for one [here][github].
 If you use an e-mail other than your `@wellesley.edu` address,
 provide Vanja or Kevin with your github user name.
 
@@ -1714,65 +1718,26 @@ which constitutes their agreement to the policies outlined above.
 
 ### References
 
-[^1]: NC State University,
-Department of Chemistry,
-[Undergraduate Research Guidelines].
-Accessed on June 13,
-2019.
+[^ncstate]: NC State University, Department of Chemistry, [Undergraduate Research Guidelines]. Accessed on June 13, 2019.
 
-[^2]: Wayne Iba,
-Professor of Computer Science,
-Westmont College.
-<https://www.westmont.edu/~iba/doingresearch.html>.
-Accessed on June 13,
-2019.
+[^iba]: Wayne Iba, Professor of Computer Science, Westmont College. <https://www.westmont.edu/~iba/doingresearch.html>. Accessed on June 13, 2019.
 
-[^3]: Unknown author.
-<https://edgeforscholars.org/wp-content/uploads/2018/06/Lab-Guidelines.pdf>.
-Accessed June 14,
-2019.
+[^guidelines]: Unknown author. <https://edgeforscholars.org/wp-content/uploads/2018/06/Lab-Guidelines.pdf>. Accessed June 14, 2019.
 
-[^4]: Gloria Luong.
-How to work successfully with undergraduate students.
-From the Science Student Council.
-Psychological Science Agenda,
-February 2010.
-<https://www.apa.org/science/about/psa/2010/02/ssc>.
-Accessed on June 14,
-2019.
+[^luong]: Gloria Luong. How to work successfully with undergraduate students. From the Science Student Council. Psychological Science Agenda, February 2010. <https://www.apa.org/science/about/psa/2010/02/ssc>. Accessed on June 14, 2019.
 
-[^5]: Morgan McGuire,
-Professor of Computer Science,
-Williams College.
-An Open Letter to Undergraduate Research Assistants,
-May 2,
-2018.
-<https://www.cs.williams.edu/~morgan/ra.pdf>.
-Accessed June 14,
-2019.
+[^mcguire]: Morgan McGuire, Professor of Computer Science, Williams College. An Open Letter to Undergraduate Research Assistants, May 2, 2018. <https://www.cs.williams.edu/~morgan/ra.pdf>. Accessed June 14, 2019.
 
-[^6]: George Mason University Students as Scholars Initiative.
-(2015,
-June).
-*Students as Scholars program rubric.* <https://oscar.gmu.edu/faculty-staff/student-learning-outcomes/>.
-Accessed on June 14,
-2019.
+[^gmu]: George Mason University Students as Scholars Initiative. (2015, June). *Students as Scholars program rubric.* <https://oscar.gmu.edu/faculty-staff/student-learning-outcomes/>. Accessed on June 14, 2019. 
 
-[^7]: Pat Schloss.
-Social Contract.
-<http://www.schlosslab.org/lab_business/social_contract.html>.
-Accessed on August 19,
-2019.
+[^Schloss]: Pat Schloss. Social Contract. <http://www.schlosslab.org/lab_business/social_contract.html>. Accessed on August 19, 2019.
 
-[^8]: Ting Lena,
-On how to run a successful lab meeting: <http://neuromechanicslab.emory.edu/documents/advice-docs/Labmeetings.pdf>.
-Accessed on August 19,
-2019.
+[^lena]: Ting Lena, On how to run a successful lab meeting: <http://neuromechanicslab.emory.edu/documents/advice-docs/Labmeetings.pdf>. Accessed on August 19, 2019.
 
-[1]: https://docs.google.com/a/wellesley.edu/spreadsheets/d/1mNVP7iphVvBv-N7P7Vcc_O3keErY9Tm-mY-fzow6dqw/edit#gid=0
-[2]: http://www.wellesley.edu/Safety/lab.html
-[3]: http://www.wellesley.edu/Safety/msds.html
-[4]: https://www.wellesley.edu/facilities/ehs/labsafety
-[5]: https://www.wellesley.edu/facilities/ehs/biosafetymanual
-[6]: http://www.yale.edu/ehs/onlinetraining/video/safetycabinet.htm
-[7]: https://github.com/join
+[chemlog]: https://docs.google.com/a/wellesley.edu/spreadsheets/d/1mNVP7iphVvBv-N7P7Vcc_O3keErY9Tm-mY-fzow6dqw/edit#gid=0
+[labsafety]: http://www.wellesley.edu/Safety/lab.html
+[msds]: http://www.wellesley.edu/Safety/msds.html
+[ehslab]: https://www.wellesley.edu/facilities/ehs/labsafety
+[ehsbio]: https://www.wellesley.edu/facilities/ehs/biosafetymanual
+[safetycab]: http://www.yale.edu/ehs/onlinetraining/video/safetycabinet.htm
+[github]: https://github.com/join
