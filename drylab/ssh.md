@@ -18,7 +18,12 @@ using "key pair encryption."
 Don't worry - you don't need to know what that means
 in order to use it effectively.
 
-
+- If you are a user that needs to set up SSH access for the first time,
+  go to the [next section](#users)
+- If you are an administrator that needs to set up an account for a new user,
+  [go here](/drylab/newusers)
+- If you are having problems with either of these things,
+  [go here](#troubleshooting)
 ## Users
 
 If you need to access [lab servers](/drylab/computers) remotely,
@@ -172,3 +177,14 @@ Host rosalind
 
 Once complete, you should be able to do eg `ssh ada`
 to connect.
+
+## Troubleshooting
+
+There are a number of problems that can arise when trying to set up SSH access.
+The following are issues We've seen before -
+if none of them solve your problem,
+don't hesitate to contact Kevin to try to resolve it.
+
+### Could not resolve host name
+
+If you run `ssh` to connect <kbd>S</kbd>
