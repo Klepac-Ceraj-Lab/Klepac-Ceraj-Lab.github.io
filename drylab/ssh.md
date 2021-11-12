@@ -127,4 +127,45 @@ and add your public keys to the list of authorized keys.
 
 ### 4. Set up your SSH configuration
 
-TODO
+Now it's time to set up a configuration file
+so that when you use `ssh` commands, your system will know what to do.
+
+The basic setup is:
+
+```
+Host <name>
+    HostName <url or ip address>
+    User <username>
+    IdentityFile <path to private key>
+```
+
+- `<name>`: This can be whatever you like - this is the name you will use to connect
+- `<url or ip address>`: address for the system you're connecting to.
+  Info for lab systems [can be found here](/drylab/computers).
+- `<username>`: user name from step 1
+- `<path to private key>`: eg `~/.ssh/ada-key`
+
+You can have separate entries for each system
+that you need to connect to.
+For example, this is just part of Kevin's `~/.ssh/config`:
+
+```plaintext
+Host ada
+    HostName 149.130.201.24
+    User kevin
+    IdentityFile /home/kevin/.ssh/ada-key
+Host hopper
+    HostName vkclab-hopper.wellesley.edu
+    User kevin
+    IdentityFile /home/kevin/.ssh/hopper-key
+Host github.com
+    User git
+    IdentityFile /home/kevin/.ssh/github-key
+Host gitlab.com
+    User git
+    IdentityFile /home/kevin/.ssh/gitlab-key
+Host rosalind
+    HostName 149.130.162.151
+    User kevin
+    IdentityFile /home/kevin/.ssh/rosalind-key
+```
