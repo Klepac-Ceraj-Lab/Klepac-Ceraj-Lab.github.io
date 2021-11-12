@@ -169,3 +169,6 @@ Host rosalind
     User kevin
     IdentityFile /home/kevin/.ssh/rosalind-key
 ```
+
+Once complete, you should be able to do eg `ssh ada`
+to connect.
