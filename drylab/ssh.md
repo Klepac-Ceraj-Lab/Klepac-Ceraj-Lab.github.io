@@ -135,6 +135,15 @@ and add your public keys to the list of authorized keys.
 Now it's time to set up a configuration file
 so that when you use `ssh` commands, your system will know what to do.
 
+Create a file in your `~/.ssh` directory
+called `config`,
+and edit it using a plaintext editor like `notepad`
+or visual studio code.
+
+Note: Mac users, if you need to save to a hidden folder like `~/.ssh`,
+in Finder (or the save window),
+you can press `cmd + shift + .` to reveal them.
+
 The basic setup is:
 
 ```
@@ -187,4 +196,158 @@ don't hesitate to contact Kevin to try to resolve it.
 
 ### Could not resolve host name
 
-If you run `ssh` to connect <kbd>S</kbd>
+There are a couple of errors that can occur
+that report `Could not resolve hostname`.
+
+#### Temporary failure in name resolution
+
+Usually, you'll get this error with typos in your command:
+
+```plaintext
+❯ ssh asa
+ssh: Could not resolve hostname asa: Temporary failure in name resolution
+
+❯ ssh ada
+Welcome to Pop!_OS 21.04 (GNU/Linux 5.11.0-7620-generic x86_64)
+```
+
+#### Name or service not known
+
+This typically means you have a typo in the `HostName` field
+of your config file.
+
+Occasionally, particularly with `ada` and `hopper`,
+it can arise due to network changes at Wellesley
+and may require a conversation with LTS.
+If you're sure you don't have typos in your config
+and this is still happening, let Kevin know.
+
+### Command hangs or "connection timed out"
+
+You must be connected to Wellesley's network,
+either through an ethernet cable,
+by connecting to the `Wellesley Secure` wifi network,
+or connecting to the [Wellesley VPN](https://www.wellesley.edu/lts/techsupport/sslvpn)
+in order to connect to a lab server through SSH.
+
+### Too many authentication failures
+
+If there is a problem with your SSH setup,
+sometimes you get an error like:
+
+```
+Received disconnect from 149.130.201.24 port 22:2: Too many auth
+entication failures
+Disconnected from 149.130.201.24 port 22
+```
+
+Many of these are problems with the remote set up,
+which you'll need an admin to solve.
+
+#### Permissions of authorized_keys file
+
+One of the most challenging problems to recognize are problems with permissions.
+For security,
+SSH requires that the files that enable access to the system are writable only by the user.
+This includes the parent `~/.ssh` directory as well.
+
+##### authorized_keys owner
+
+First, check the ownership of the `/home/$USER/.ssh/authorized_keys` file,
+where `$USER` is the user that is having trouble connecting.
+User `ls -l` to check
+
+```
+$ ls -l /home/kevin/.ssh/
+total 76
+-rw-r--r-- 1 kevin facstaff 1674 Jan 25  2021 aspera.openssh
+-rw-rw-r-- 1 root  root     2289 Oct 25 09:41 authorized_keys
+-rw-r--r-- 1 kevin facstaff  553 Oct 28  2020 config
+-rw------- 1 kevin facstaff 2602 Oct 19  2020 documenter-key
+-rw-r--r-- 1 kevin facstaff  570 Oct 19  2020 documenter-key.pub
+# ...
+```
+
+The 3rd and 4th column here are the user and group respectively.
+Here, each of these files are "owned" by the user `kevin` and the group `facstaff`,
+except for `authorized_keys`, which is owned by `root` in the group `root`.
+
+If these are not correct (eg if the owner is "root" or something else),
+use `chown` command (with `sudo`), eg
+
+```sh
+$ sudo chown kevin:facstaff /home/kevin/.ssh/authorized_keys
+```
+
+Replace `kevin` with the correct user, and `facstaff` with `students` if appropriate.
+
+##### authorized_keys permissions
+
+The first column in the output of `ls -l` is the permissions.
+
+- The first position is `-` or `d`, which tells you if it's a file or not.
+- The next 3 positions are `r`, `w`, and `x`,
+  for `r`ead, `w`rite, and e`x`ecute for the **user**.
+  If the letter is present, that permission is granted,
+  or `-` if it is not.
+- The next 3 positions are `r`, `w`, and `x` for the **group**
+- The next 3 positions are `r`, `w`, and `x` for **other** (everyone else).
+
+For example,
+
+```
+-rw-r--r--
+```
+
+Is a file (`-` in the first position),
+and the user has read and write permission,
+while the group and others have read permission.
+
+Another example:
+
+```
+drwxrwxr-x
+```
+
+is a directory, where the user and group have read/write/execute
+(for directories, "execute" permissions are necessary to open them),
+and other have only read and execute.
+
+The only person that can have write access to `authorized_keys`
+is the user.
+In other words, when you do `ls -l`,
+the only `w` can be in the 3rd position.
+
+In this output:
+
+```
+$ ls -l /home/kevin/.ssh/
+total 76
+-rw-r--r-- 1 kevin facstaff 1674 Jan 25  2021 aspera.openssh
+-rw-rw-r-- 1 kevin facstaff 2289 Oct 25 09:41 authorized_keys
+-rw-r--r-- 1 kevin facstaff  553 Oct 28  2020 config
+-rw------- 1 kevin facstaff 2602 Oct 19  2020 documenter-key
+-rw-r--r-- 1 kevin facstaff  570 Oct 19  2020 documenter-key.pub
+# ...
+```
+
+The permissions are `-rw-rw-r--` for `authorized_keys` which shows that both
+user AND group have write access.
+
+To fix this, use `chmod` (again, you'll need `sudo`):
+
+```sh
+$ sudo chmod g=r /home/kevin/.ssh/authorized_keys
+```
+
+**Note**: for SSH, even the parent directory needs to have the correct permissions,
+since someone could just move and re-write the directory as an attack.
+In other words, the permissions for the `/home/$USER/.ssh` directory
+should also be set, usually to `drwx------`.
+If not, run
+
+```sh
+$ sudo chmod 700 /home/kevin/.ssh
+```
+
+where `kevin` is replaced by the appropriate user.
