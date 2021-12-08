@@ -16,7 +16,7 @@
 # [RPiCamera Repository](https://github.com/Klepac-Ceraj-Lab/RPiCamera)
 
 The RPiCamera Repository contains all the necessary code to use the RPi Camera.
-More detailed information on how to use the repository and run the scripts can be found in the [repository README](https://github.com/Klepac-Ceraj-Lab/RPiCamera/blob/main/README.md) and the [scripts README](https://github.com/Klepac-Ceraj-Lab/RPiCamera/blob/main/scripts/README.md) respectively.
+Detailed information on how to use the repository and run the scripts can be found in the [repository README](https://github.com/Klepac-Ceraj-Lab/RPiCamera/blob/main/README.md) and the [scripts README](https://github.com/Klepac-Ceraj-Lab/RPiCamera/blob/main/scripts/README.md) respectively.
 
 # Using the Code
 
