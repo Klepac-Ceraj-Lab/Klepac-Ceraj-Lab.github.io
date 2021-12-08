@@ -3,7 +3,7 @@
 ## Names and Details
 - `emmanuelle`
     - IP: 149.130.206.37
-    - must use remotely (eg. through [ssh](https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh))
+    - must connect remotely (eg. through [ssh](https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh))
 - `doudna`
     - IP: 149.130.206.38
     - connected to RPi Box
