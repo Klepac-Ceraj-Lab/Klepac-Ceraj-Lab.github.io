@@ -9,10 +9,6 @@
     - connected to RPi Box
     - connected to touch screen monitor and keyboard
 
-## Login
-- username: anika
-- password: humanm1cr0b10m3
-
 # [RPiCamera Repository](https://github.com/Klepac-Ceraj-Lab/RPiCamera)
 
 The RPiCamera Repository contains all the necessary code to use the RPi Camera.
