@@ -3,7 +3,7 @@
 ## Names and Details
 - `emmanuelle`
     - IP: 149.130.206.37
-    - must use remotely (eg. through [ssh](https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh))
+    - must connect remotely (eg. through [ssh](https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh))
 - `doudna`
     - IP: 149.130.206.38
     - connected to RPi Box
@@ -12,7 +12,7 @@
 # [RPiCamera Repository](https://github.com/Klepac-Ceraj-Lab/RPiCamera)
 
 The RPiCamera Repository contains all the necessary code to use the RPi Camera.
-More detailed information on how to use the repository and run the scripts can be found in the [repository README](https://github.com/Klepac-Ceraj-Lab/RPiCamera/blob/main/README.md) and the [scripts README](https://github.com/Klepac-Ceraj-Lab/RPiCamera/blob/main/scripts/README.md) respectively.
+Detailed information on how to use the repository and run the scripts can be found in the [repository README](https://github.com/Klepac-Ceraj-Lab/RPiCamera/blob/main/README.md) and the [scripts README](https://github.com/Klepac-Ceraj-Lab/RPiCamera/blob/main/scripts/README.md) respectively.
 
 # Using the Code
 
