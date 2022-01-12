@@ -27,7 +27,7 @@
     - Two camera-box adaptors (white discs that fit in hole on top of box):
         - One for 6mm RPi camera (small inner radius)
         - One for 16mm RPi camera (larger inner radius)
-- The Raspberry Pi (RPi)
+- The Raspberry Pi (RPi) (eg [`emmanuelle` or `doudna`](computers#raspberry_pis_emmanuelle_and_doudna))
     - Raspberry Pi (in its case)
     - Camera
     - Mini touchscreen monitor and keyboard
@@ -44,7 +44,7 @@
 4. Place camera with desired lens into the adaptor, with lens facing down
 5. Preview camera view by running [`preview.py`](https://github.com/Klepac-Ceraj-Lab/RPiCamera/tree/main/scripts#preview)
     - *For orienting the view - the side where the ribbon comes out of the camera board is the bottom of the photo*
-6. Adjust things as needed
+6. Adjust things as needed. For example, you might:
     - Put platform on different shelf
     - Turn on leds
         - *If the object is reflective it may reflect the spiral of bright white leds. in that case using side lights may be better*
