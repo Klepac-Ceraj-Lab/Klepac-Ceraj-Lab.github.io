@@ -75,3 +75,5 @@ if you're unsure about which computer system(s) you'll need to use.
 ## Raspberry pis (`emmanuelle` and `doudna`)
 
 **Primary Administrator**: Anika
+
+The [RPi Manual](rpi-manual) contains instructions on how to use an RPi and the Fruit Basket to take photos and videos.
