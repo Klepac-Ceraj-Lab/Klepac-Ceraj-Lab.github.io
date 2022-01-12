@@ -1,6 +1,6 @@
-# Basic information
+# Basic Information
 
-## Names and details
+## Names and Details
 - `emmanuelle`
     - Name: anikaraspberrypi.wellesley.edu
     - IP Address: 149.130.206.37
@@ -63,7 +63,7 @@
 8. Close and secure door
     - Make sure the screw is fitted securely in the hole
 
-## Taking photos/videos
+## Taking Photos/Videos
 
 The [RPiCamera](https://github.com/Klepac-Ceraj-Lab/RPiCamera) repository contains all the necessary code to take photos and videos.
 Detailed information on how to use the repository and run its scripts can be found in the [repository README](https://github.com/Klepac-Ceraj-Lab/RPiCamera/blob/main/README.md) and the [scripts README](https://github.com/Klepac-Ceraj-Lab/RPiCamera/blob/main/scripts/README.md) respectively.
