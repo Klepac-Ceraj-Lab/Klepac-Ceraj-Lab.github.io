@@ -8,11 +8,11 @@
 - `doudna`
     - Name: anikaraspberrypi2.wellesley.edu
     - Address: 149.130.206.38    
-    - connected to RPi Box
+    - connected to the Fruit Basket
     - connected to touch screen monitor and keyboard
     - can also access remotely (eg. through ssh)
 
-# Using the RPi Box
+# Using the Fruit Basket
 
 ## Features
  - The Box
