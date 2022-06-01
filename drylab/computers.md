@@ -30,6 +30,7 @@ if you're unsure about which computer system(s) you'll need to use.
 
 - **Primary Administrator**: Kevin
 - **URL**: vkclab-hopper.wellesley.edu
+- **IP address**: 10.149.0.11
 
 ### Hard-drives
 
@@ -44,7 +45,8 @@ if you're unsure about which computer system(s) you'll need to use.
 ## ada
 
 - **Primary Administrator**: Kevin
-- **IP address**: 149.130.201.24
+- **URL**: vkclab-hopper.wellesley.edu
+- **IP address**: 10.131.0.35
 
 ### Hard-drives
 
@@ -58,7 +60,8 @@ if you're unsure about which computer system(s) you'll need to use.
 ## rosalind
 
 - **Primary Administrator**: Shelley
-- **IP address**: 149.130.162.151
+- **URL**: vkclab-rosalind.wellesley.edu
+- **IP address**: 10.149.0.36
 
 ### Hard-drives
 
