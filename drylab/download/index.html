@@ -70,7 +70,7 @@ C0047-7F-1A_S9_L003_R1_001.fastq.gz
 <p>To reduce the overhead of checking the integrity of these files in the future, we&#39;ll use <code>md5sum</code> which creates a hash of the file contents &#40;note - this may also take a while&#41;. Create a <code>.md5</code> for each part of a batch.</p>
 <p><em>Note: if 16S samples, label 16S</em>batch###_</p>
 <pre><code class="sh hljs">$ <span class=hljs-built_in >cd</span> RowlandMetaG_1
-$ md5sum *.fastq.gz &gt; ../details/batch006_1.md5</code></pre>
+$ <span class=hljs-built_in >md5sum</span> *.fastq.gz &gt; ../details/batch006_1.md5</code></pre>
 <p>Which looks like this:</p>
 <pre><code class="sh hljs">$ <span class=hljs-built_in >head</span> -5 ../details/batch006_1.md5
 66f8abc4a71d7ed945ae6a487629816c  C0047-7F-1A_S9_L001_R1_001.fastq.gz
@@ -130,7 +130,7 @@ $ <span class=hljs-built_in >ls</span> -lh RowlandMetaG_ECHO/ &gt; details/batch
 <span class=hljs-comment ># resulting details.txt file looks different from other details.txt files</span>
 $ <span class=hljs-built_in >ls</span> RowlandMetaG_ECHO/ | grep fastq.gz &gt; batch00<span class=hljs-comment >#_files.txt</span>
 $ <span class=hljs-built_in >cd</span> RowlandMetaG_ECHO
-$ md5sum *.fastq.gz &gt; ../details/batch00<span class=hljs-comment >#.md5</span></code></pre>
+$ <span class=hljs-built_in >md5sum</span> *.fastq.gz &gt; ../details/batch00<span class=hljs-comment >#.md5</span></code></pre>
 <ul>
 <li><p>Make new folder for all samples from the sequencing batch on NTM</p>
 
@@ -151,7 +151,7 @@ $ rsync -avzP /Volumes/G-DRIVE\ USB-C/ECHO/sequencing/16S/RowlandMetaG/details/b
   <span class=hljs-keyword >done</span></code></pre>
 <div class=page-foot >
   <div class=copyright >
-    &copy; VKC Lab Staff  | Last modified: January 14, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; VKC Lab Staff  | Last modified: June 01, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div>
