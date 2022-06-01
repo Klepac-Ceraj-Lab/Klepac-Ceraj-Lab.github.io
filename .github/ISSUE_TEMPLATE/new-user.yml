@@ -1,0 +1,52 @@
+name: New User
+description: Request for user account on lab servers
+title: "[NEW USER] your-name-here"
+labels: ["admin"]
+assignees:
+  - kescobo
+body:
+  - type: markdown
+    attributes:
+      value: |
+        See the [SSH setup page](https://klepac-ceraj-lab.github.io/drylab/ssh/) for more information.
+
+        Please fill out the following:
+  - type: input
+    id: name
+    attributes:
+      label: Your name
+      placeholder: "Jane Doe"
+    validations:
+      required: true
+  - type: input
+    id: wellesley-email
+    attributes:
+      label: Your Wellesley e-mail address
+      placeholder: "jdoe123@wellesley.edu"
+    validations:
+      required: true
+  - type: input
+    id: user-name
+    attributes:
+      label: Requested user name
+      description: "This is usually your first name, or first initial and last name"
+      placeholder: "jane"
+    validations:
+      required: true
+  - type: checkboxes
+    id: servers
+    attributes:
+      label: Which server(s) do you need access to?
+      description: Please see the [SSH setup page](https://klepac-ceraj-lab.github.io/drylab/computers/) for more information.
+      options:
+        - label: "hopper"
+        - label: "ada"
+        - label: "rosalind"
+        - label: "one of the Raspberry pis"
+  - type: textarea
+    id: next-week
+    attributes:
+      label: ssh-keys
+      description: Paste your public key(s) (eg `ada-key.pub`) bellow. If you need access to multiple servers, please use a separate key for each, separated by new lines
+      placeholder:  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC...
+      render: Text
